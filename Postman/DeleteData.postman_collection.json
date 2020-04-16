@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "309c0d17-e9cd-4714-a05c-4c6852e8c075",
+		"name": "DeleteData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "deleteByIdSuccess",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products/0",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteByIdDataNotFound",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products/10",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

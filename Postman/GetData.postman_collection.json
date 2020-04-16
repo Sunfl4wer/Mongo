@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "3fc8deb1-bf10-45f2-8051-ce208b1ffaa4",
+		"name": "GetData",
+		"description": "GET tests for \"product\" amd \"category\" collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productName\":\"iPhone 9000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCategories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"name\":\""
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByIdSuccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products/0",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByIdNotFoundData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products/6",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductsByRegexSuccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/regexProductName?regex=the",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"regexProductName"
+					],
+					"query": [
+						{
+							"key": "regex",
+							"value": "the"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByRegexNotFoundData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/regexProductName?regex=python",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"regexProductName"
+					],
+					"query": [
+						{
+							"key": "regex",
+							"value": "python"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFirstByProductNameSuccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/firstByProductName?productName=Signals and Systems",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"firstByProductName"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "Signals and Systems"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFirstByProductNameDataNotFound",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/firstByProductName?productName=signals and systems",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"firstByProductName"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "signals and systems"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPageProductNotFoundDat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/allWithPage?pageNo=3&noProductsPerPage=2",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"allWithPage"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "3"
+						},
+						{
+							"key": "noProductsPerPage",
+							"value": "2"
+						}
+					]
+				},
+				"description": "4th page\n2 products a page\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getPageProductSuccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/allWithPage?pageNo=1&noProductsPerPage=2",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"allWithPage"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "noProductsPerPage",
+							"value": "2"
+						}
+					]
+				},
+				"description": "2nd page\n2 products a page"
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomByProductNameSuccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/customByProductName?productName=Signals and Systems",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"customByProductName"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "Signals and Systems"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomByProductNameNotFoundData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/customByProductName?productName=signals and systems",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"customByProductName"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "signals and systems"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

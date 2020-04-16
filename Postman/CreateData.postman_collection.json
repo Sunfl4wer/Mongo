@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "4c97a285-ee9e-48d8-8793-e714872a03ef",
+		"name": "CreateData",
+		"description": "Create documents for \"product\" and \"category\" collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createCategory0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"0\",\n\t\"category\":\"IT Book\",\n\t\"numberOfProducts\":\"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCategory1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"1\",\n\t\"category\":\"Telecommunication Book\",\n\t\"numberOfProducts\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"id\":\"0\",\n\t\t\"productName\":\"The C Programming Language, 2nd Ed\",\n\t\t\"pricePerUnit\":\"20\",\n\t\t\"categoryId\":\"0\",\n\t\t\"inStock\":\"true\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"id\":\"1\",\n\t\t\"productName\":\"Java the Complete Reference\",\n\t\t\"pricePerUnit\":\"40\",\n\t\t\"categoryId\":\"0\",\n\t\t\"inStock\":\"true\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"id\":\"2\",\n\t\t\"productName\":\"Design Patterns: Elements of Reusable Object-Oriented Software\",\n\t\t\"pricePerUnit\":\"30\",\n\t\t\"categoryId\":\"0\",\n\t\t\"inStock\":\"true\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"id\":\"3\",\n\t\t\"productName\":\"Signals and Systems\",\n\t\t\"pricePerUnit\":\"31\",\n\t\t\"categoryId\":\"1\",\n\t\t\"inStock\":\"true\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\t\"id\":\"4\",\n\t\t\"productName\":\"Digital Signal Processing\",\n\t\t\"pricePerUnit\":\"45\",\n\t\t\"categoryId\":\"1\",\n\t\t\"inStock\":\"true\"\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/ecommerce-demo/products",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ecommerce-demo",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
