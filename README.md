@@ -48,11 +48,11 @@ Develop the services of a simple e-Commerce site
     - Delete a product.
       - `DELETE https://localhost:9090/ecommerce-demo/products/{id}`
 3. Develop JUnit test suite.
-   - [x] Database test
-   - [x] ApplicationTests
-   - [x] Api tests. All the functions in API are tested.
+   - [x] [Database test.](ecommerce/src/test/java/com/ecommerce/repository/DatabaseTest.java)
+   - [x] [ApplicationTests.](ecommerce/src/test/java/com/ecommerce/EcommerceApplicationTests.java)
+   - [x] [Api tests. All the functions in API are tested.](ecommerce/src/test/java/com/ecommerce/api/ApiTests.java)
 4. Define profiles e.g dev & qc
-   - [__develoment__ environment properties](src/main/resouces/application.properties)
-   - [__test__ environment properties](src/test/resouces/application.properties)
+   - [__develoment__ environment properties](ecommerce/src/main/resouces/application.properties)
+   - [__test__ environment properties](ecommerce/src/test/resouces/application.properties)
 5. Generate Postman test suit & dev environment.
    - Postman test suit is provided in the [_Postman_](Postman) folder of the repository.
