@@ -13,3 +13,37 @@ Develop the services of a simple e-Commerce site
 3. Develop JUnit test suite.
 4. Define profiles e.g dev & qc
 5. Generate Postman test suit & dev environment.
+
+## Solution
+1. Category & product management with basic information
+   - Product model
+     - `{`<br/>
+         `"id" : [id of the product - type: long],`<br/>
+         `"productName" : [name of the product - type: String],`<br/>
+         `"pricePerUnit" : [price per unit - type: double],`<br/>
+         `"categoryId" : [the cateogory the product belongs - type: long],`<br/>
+         `"inStock" : [tell if the product is still in stock or not - type: boolean]`<br/>
+       `}`
+       
+    - Category model
+      - `{`<br/>
+         `"id" : [id of the category - type: long],`<br/>
+         `"category" : [name of the category - type: String],`<br/>
+         `"numberOfProducts" : [number of products that belong to this category - type: int],`<br/>
+        `}`
+ 2. Provide HTTP GET/POST/PUT/DELETE requests
+    - Retrieve list of predefined categorires.
+      - `GET https://localhost:9090/ecommerce-demo/categories`
+    - Add new product.
+      - `POST https://localhost:9090/ecommerce-demo/products`
+    - Update a specific product.
+      - `PUT https://localhost:9090/ecommerce-demo/products/{id}`
+    - Get list of products with pagination.
+      - `GET https://localhost:9090/ecommerce-demo/allWithPage?pageNo={pageNumber}&noProductsPerPage={number of products per page}`
+    - Search products.
+      - `GET https://localhost:9090/ecommerce-demo/regexProductName?regex={regular expression (case insensitive)}`
+      - `GET https://localhost:9090/ecommerce-demo/firstByProductName?productName={name of the product (exact and case sensitive)}`
+    - View product details
+      - `GET https://localhost:9090/ecommerce-demo/products/{id}`
+    - Delete a product.
+      - `DELETE https://localhost:9090/ecommerce-demo/products/{id}`
