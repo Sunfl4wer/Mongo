@@ -16,7 +16,7 @@ Develop the services of a simple e-Commerce site
 
 ## Solution
 1. Category & product management with basic information
-   - Product model
+   - Product model (see [Product.java](ecommerce/src/main/java/com/ecommerce/model/Product.java))
      - `{`<br/>
          `"id" : [id of the product - type: long],`<br/>
          `"productName" : [name of the product - type: String],`<br/>
@@ -25,13 +25,13 @@ Develop the services of a simple e-Commerce site
          `"inStock" : [tell if the product is still in stock or not - type: boolean]`<br/>
        `}`
        
-    - Category model
+    - Category model (see [Category.java](ecommerce/src/main/java/com/ecommerce/model/Category.java))
       - `{`<br/>
          `"id" : [id of the category - type: long],`<br/>
          `"category" : [name of the category - type: String],`<br/>
          `"numberOfProducts" : [number of products that belong to this category - type: int],`<br/>
         `}`
- 2. Provide HTTP GET/POST/PUT/DELETE requests
+ 2. Provide HTTP GET/POST/PUT/DELETE requests (see [Api.java](ecommerce/src/main/java/com/ecommerce/api/Api.java))
     - Retrieve list of predefined categorires.
       - `GET https://localhost:9090/ecommerce-demo/categories`
     - Add new product.
@@ -47,3 +47,12 @@ Develop the services of a simple e-Commerce site
       - `GET https://localhost:9090/ecommerce-demo/products/{id}`
     - Delete a product.
       - `DELETE https://localhost:9090/ecommerce-demo/products/{id}`
+3. Develop JUnit test suite.
+   - [x] Database test
+   - [x] ApplicationTests
+   - [x] Api tests. All the functions in API are tested.
+4. Define profiles e.g dev & qc
+   - [__develoment__ environment properties](src/main/resouces/application.properties)
+   - [__test__ environment properties](src/test/resouces/application.properties)
+5. Generate Postman test suit & dev environment.
+   - Postman test suit is provided in the [_Postman_](Postman) folder of the repository.
